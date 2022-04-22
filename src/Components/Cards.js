@@ -2,9 +2,18 @@ import React from 'react'
 import map from '../img/location-map.jpg';
 
 const Cards = (props) => {
+
+  let badgeText
+  if(props.item.location === 'Japan') {
+     badgeText = 'Asia';
+  } else if (props.item.location === 'Norway') {
+    badgeText = 'Europe';
+  }
+
   return (
     <div>
         <div className="container">
+            {badgeText && <div className="card--badge">{badgeText}</div>}
             <img className="card--img" src={props.item.imageUrl} alt='japan' />
             <div className="container2">
                 <div className="card--title">
