@@ -1,5 +1,6 @@
 import Navbar from './Components/Navbar';
 import Cards from './Components/Cards';
+import Meme from './Components/Meme';
 import {data} from './data.js';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
     <div>
       <Navbar />
       {TravelData}
+      <Meme />
     </div>
   );
 }
